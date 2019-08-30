@@ -48,19 +48,21 @@
 	</audio>
 </body>
 <script>
-	function audioAutoPlay() {
-		var audio = document.getElementById('audio');
-		audio.load()
-		let playPromise = audio.play()
-		if (playPromise !== undefined) {
-			playPromise.then(() => {
-				audio.play()
-			}).catch(() => {
+			var audio = document.getElementById('audio');
+		audio.play()
+	// function audioAutoPlay() {
+	// 	var audio = document.getElementById('audio');
+	// 	audio.load()
+	// 	let playPromise = audio.play()
+	// 	if (playPromise !== undefined) {
+	// 		playPromise.then(() => {
+	// 			audio.play()
+	// 		}).catch(() => {
 
-			})
-		}
-	}
-	audioAutoPlay();
+	// 		})
+	// 	}
+	// }
+	// audioAutoPlay();
 </script>
 
 </html>
