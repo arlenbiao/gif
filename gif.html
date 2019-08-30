@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>周五啦~~~</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			text-align: center;
+		}
+
+		img {
+			max-width: 900px;
+			width: 100%;
+		}
+
+		#audio {
+			display: none;
+		}
+
+		html {
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(to bottom right, red, yellow, #c0c0c0, blue);
+		}
+
+		body {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background: url(http://p0.qhimg.com/t0147593a4f2b845a13.gif) center no-repeat;
+			background-size:100%;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <img src="./gif.gif" alt=""> -->
+
+	<audio id="audio" loop preload="auto" controls autoplay
+		src="http://ip.h5.nf01.sycdn.kuwo.cn/de3135c51a71de636bfe6653a5736056/5d68e71e/resource/n2/23/15/2036567617.mp3">
+		<source src="song.ogg" type="audio/ogg" />
+		<source src="song.mp3" type="audio/mpeg" />
+		Your browser does not support the audio element.
+	</audio>
+</body>
+<script>
+	function audioAutoPlay() {
+		var audio = document.getElementById('audio');
+		audio.load()
+		let playPromise = audio.play()
+		if (playPromise !== undefined) {
+			playPromise.then(() => {
+				audio.play()
+			}).catch(() => {
+
+			})
+		}
+	}
+	audioAutoPlay();
+</script>
+
+</html>
