@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>周五啦~~~</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+
+	<script src='./js/three.min.js'></script>
+	<script src='./js/TweenMax.min.js'></script>
+	<script src='./js/dat.gui.min.js'></script>
+	<script src='./js/randomColor.min.js'></script>
+	<script src='./js/OrbitControls.js'></script>
+	<script src="./js/index.js"></script>
+	
+	<div class="box">
+		<img src="http://p0.qhimg.com/t0147593a4f2b845a13.gif" />
+	</div>
+	<!-- <video controls autoplay name="media">
+		<source src="https://webfs.yun.kugou.com/201909101635/c52d67e1c41d778c7c16834fc436cd4b/G130/M05/06/10/YpQEAFsAUVeAR3hwADh7NUMWQBM133.mp3"
+	type="audio/mpeg"></video> -->
+	<audio id="vd" loop preload="auto" controls autoplay
+		src="https://webfs.yun.kugou.com/201909101635/c52d67e1c41d778c7c16834fc436cd4b/G130/M05/06/10/YpQEAFsAUVeAR3hwADh7NUMWQBM133.mp3">
+	</audio>
+	<script>
+		function toggleSound() {
+			var music = document.getElementById("vd");//获取ID  
+			// console.log(music);
+			// console.log(music.paused);
+			if (music.paused) { //判读是否播放  
+				music.paused = false;
+				music.play(); //没有就播放 
+			}
+		}
+		setInterval("toggleSound()", 1000);
+	</script>
+</body>
+
+</html>
