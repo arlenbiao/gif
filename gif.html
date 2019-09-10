@@ -17,7 +17,7 @@
 			width: 100%;
 		}
 
-		#audio {
+		#vd {
 			display: none;
 		}
 
@@ -35,31 +35,29 @@
 			background-size: 100%;
 		}
 	</style>
+	
 </head>
-
+<script>
+	function toggleSound() {
+		var music = document.getElementById("vd");//获取ID  
+		// console.log(music);
+		// console.log(music.paused);
+		if (music.paused) { //判读是否播放  
+			music.paused = false;
+			music.play(); //没有就播放 
+		}
+	}
+	setInterval("toggleSound()", 1000);
+</script>
 <body id="body">
 	<!-- <img src="./gif.gif" alt=""> -->
-
-	<audio id="audio" loop preload="auto" controls autoplay
-		src="http://ip.h5.nf01.sycdn.kuwo.cn/de3135c51a71de636bfe6653a5736056/5d68e71e/resource/n2/23/15/2036567617.mp3">
+	<!-- <video controls autoplay name="media">
+		<source src="https://webfs.yun.kugou.com/201909101635/c52d67e1c41d778c7c16834fc436cd4b/G130/M05/06/10/YpQEAFsAUVeAR3hwADh7NUMWQBM133.mp3"
+	type="audio/mpeg"></video> -->
+	<audio id="vd" loop preload="auto" controls autoplay
+		src="https://webfs.yun.kugou.com/201909101635/c52d67e1c41d778c7c16834fc436cd4b/G130/M05/06/10/YpQEAFsAUVeAR3hwADh7NUMWQBM133.mp3">
 	</audio>
 </body>
-<script>
-			var audio = document.getElementById('audio');
-		audio.play()
-	// function audioAutoPlay() {
-	// 	var audio = document.getElementById('audio');
-	// 	audio.load()
-	// 	let playPromise = audio.play()
-	// 	if (playPromise !== undefined) {
-	// 		playPromise.then(() => {
-	// 			audio.play()
-	// 		}).catch(() => {
 
-	// 		})
-	// 	}
-	// }
-	// audioAutoPlay();
-</script>
 
 </html>
